@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222;
+}
+
+.navigation {
+    background-color: #3de07e;
+    background-image: url("../img/ninjahead.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation img {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.navigation h1 {
+    font-size: 5rem;
+}
+
+main {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin: 2rem auto;
+    gap: 2rem;
+}
+
+.card {
+    grid-column: auto / span 2;
+    color: #fff;
+}
+
+.large {
+    grid-column: auto / span 3;
+    background-color: #fff;
+    color: #222;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card button {
+    appearance: none;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #E83F57;
+    color: #fff;
+    border-radius: 0.125rem;
+    font-weight: 600;
+    margin-top: 2rem ;
+}
+
+.card.large h2,
+.card.large p {
+    margin: 0 1rem;
+}
+
+.card.large button {
+    margin: 2rem 1rem;
+}
+
+footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: ". links address social .";
+    gap: 2rem;
+    color: #fff;
+}
+
+footer article:nth-child(1) {
+    grid-area: links;
+}
+
+footer article:nth-child(2) {
+    grid-area: address;
+}
+
+footer article:nth-child(3) {
+    grid-area: social;
+}
+
+footer figure, footer p {
+    margin: 0;
+}
